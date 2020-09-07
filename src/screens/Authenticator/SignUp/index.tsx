@@ -54,7 +54,7 @@ const SignUp = ({ navigation }: SignUpT): ReactElement => {
           initialValues={{ email: '', password: '', passwordConfirmation: '' }}
           onSubmit={(values): Promise<void> => _onPress(values)}
           validationSchema={Yup.object().shape({
-            email: Yup.string().email().required(),
+            email: Yup.string().required(),
             password: Yup.string().min(6).required(),
             passwordConfirmation: Yup.string().min(6).required()
           })}
@@ -66,7 +66,7 @@ const SignUp = ({ navigation }: SignUpT): ReactElement => {
                 value={values.email}
                 onChangeText={handleChange('email')}
                 onBlur={(): void => setFieldTouched('email')}
-                placeholder="E-mail"
+                placeholder="Phone"
                 touched={touched}
                 errors={errors}
                 autoCapitalize="none"
